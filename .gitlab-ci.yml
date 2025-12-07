@@ -18,5 +18,10 @@ build-job:
 deploy-job:
   stage: deploy
   script:
+<<<<<<< HEAD
     - echo "Deploying application..."
     - echo "Deployment successful"
+=======
+    - echo "Deployment successful"
+    
+>>>>>>> fab05db648d881696550a8dc253355d340df5d69
