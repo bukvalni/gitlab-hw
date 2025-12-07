@@ -1,25 +1,20 @@
-echo 'image: alpine:latest
-
-stages:
+echo 'stages:
   - test
   - build
   - deploy
 
-test_job:
+test_stage:
   stage: test
   script:
-    - echo "Stage 1: Testing"
-    - echo "All tests passed!"
+    - echo "Testing..."
 
-build_job:
+build_stage:
   stage: build
   script:
-    - echo "Stage 2: Building"
-    - echo "Build completed!"
+    - echo "Building..."
 
-deploy_job:
+deploy_stage:
   stage: deploy
   script:
-    - echo "Stage 3: Deployment"
-    - echo "Deployment successful!"
-    
+    - echo "Deploying..."
+
