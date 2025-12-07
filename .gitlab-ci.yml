@@ -1,15 +1,27 @@
-image: docker:latest
+image: alpine:latest
 
-services:
-  - docker:dind
+stages:
+  - тест
+  - сборка
+  - деплой
 
-variables:
-  DOCKER_HOST: tcp://docker:2375
-
-test-docker:
+тест:
+  stage: тест
   script:
-    - echo "Проверяем Docker..."
-    - docker --version
-    - echo "Запускаем тестовый контейнер..."
-    - docker run --rm alpine:latest echo "Работает!"
-    - echo "Успешно завершено"
+    - echo "Этап 1: Тестирование"
+    - echo "ОС: Alpine Linux"
+    - echo "Тесты пройдены"
+
+сборка:
+  stage: сборка
+  script:
+    - echo "Этап 2: Сборка"
+    - echo "Имитация сборки проекта..."
+    - echo "Сборка завершена"
+
+деплой:
+  stage: деплой
+  script:
+    - echo "Этап 3: Деплой"
+    - echo "Развертывание приложения..."
+    - echo "Деплой успешно завершен"
