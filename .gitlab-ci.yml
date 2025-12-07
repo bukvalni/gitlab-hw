@@ -1,24 +1,22 @@
-image: alpine:latest
-
 stages:
   - test
   - build
   - deploy
 
-test_job:
+test-job:
   stage: test
   script:
-    - echo "Stage 1: Testing"
-    - echo "All tests passed!"
+    - echo "Running tests..."
+    - echo "Tests completed"
 
-build_job:
+build-job:
   stage: build
   script:
-    - echo "Stage 2: Building"
-    - echo "Build completed!"
+    - echo "Building project..."
+    - echo "Build completed"
 
-deploy_job:
+deploy-job:
   stage: deploy
   script:
-    - echo "Stage 3: Deployment"
-    - echo "Deployment successful!"
+    - echo "Deploying application..."
+    - echo "Deployment successful"
