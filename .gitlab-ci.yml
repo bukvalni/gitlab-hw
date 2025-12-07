@@ -1,19 +1,15 @@
 image: docker:latest
 
-stages:
-  - проверка
-  - завершение
+services:
+  - docker:dind
 
-проверка:
-  stage: проверка
+variables:
+  DOCKER_HOST: tcp://docker:2375
+
+test-docker:
   script:
-    - echo "=== ПРОВЕРКА DOCKER ==="
+    - echo "Проверяем Docker..."
     - docker --version
-    - echo "Docker доступен"
-
-завершение:
-  stage: завершение
-  script:
-    - echo "=== ЗАВЕРШЕНИЕ ==="
-    - echo "Pipeline выполнен успешно!"
-    - echo "Все работает корректно"
+    - echo "Запускаем тестовый контейнер..."
+    - docker run --rm alpine:latest echo "Работает!"
+    - echo "Успешно завершено"
