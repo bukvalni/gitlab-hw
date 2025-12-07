@@ -24,8 +24,11 @@
 
 ### Задание 1
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+
+![Gitlab local](img2/gitlab_local.png)
+![Runner](img2/runner.png)
+![Runner register](img2/runner_register.png)
+
 
 
 ---
@@ -58,8 +61,8 @@ deploy-job:
     - echo "Deployment successful"
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
+![Pipeline](img2/pipeline.png)
+![Stages](img2/stages.png)
 
 
 ---
