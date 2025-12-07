@@ -1,20 +1,5 @@
-echo 'stages:
-  - test
-  - build
-  - deploy
-
-test_stage:
-  stage: test
+echo 'test_job:
   script:
-    - echo "Testing..."
-
-build_stage:
-  stage: build
-  script:
-    - echo "Building..."
-
-deploy_stage:
-  stage: deploy
-  script:
-    - echo "Deploying..."
+    - echo "CI/CD Pipeline started"
+    - echo "Job completed successfully"
 
