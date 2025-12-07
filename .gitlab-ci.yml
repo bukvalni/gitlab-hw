@@ -1,4 +1,4 @@
-image: alpine:latest
+echo 'image: alpine:latest
 
 stages:
   - test
@@ -22,3 +22,4 @@ deploy_job:
   script:
     - echo "Stage 3: Deployment"
     - echo "Deployment successful!"
+    
