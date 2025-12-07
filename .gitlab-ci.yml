@@ -1,17 +1,19 @@
-echo 'image: alpine:latest
-
 stages:
   - test
   - build
+  - deploy
 
-job1:
+test-job:
   stage: test
   script:
-    - echo "Stage 1: Testing"
-    - echo "Current time: $(date)"
+    - echo "Running tests..."
 
-job2:
+build-job:
   stage: build
   script:
-    - echo "Stage 2: Building"
-    - echo "Build completed"' > .gitlab-ci.yml
+    - echo "Building project..."
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
