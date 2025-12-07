@@ -1,5 +1,17 @@
-echo 'test_job:
-  script:
-    - echo "CI/CD Pipeline started"
-    - echo "Job completed successfully"
+echo 'image: alpine:latest
 
+stages:
+  - test
+  - build
+
+job1:
+  stage: test
+  script:
+    - echo "Stage 1: Testing"
+    - echo "Current time: $(date)"
+
+job2:
+  stage: build
+  script:
+    - echo "Stage 2: Building"
+    - echo "Build completed"' > .gitlab-ci.yml
