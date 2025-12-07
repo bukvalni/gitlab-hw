@@ -7,13 +7,17 @@ test-job:
   stage: test
   script:
     - echo "Running tests..."
+    - echo "Tests completed"
 
 build-job:
   stage: build
   script:
     - echo "Building project..."
+    - echo "Build completed"
 
 deploy-job:
   stage: deploy
   script:
     - echo "Deploying application..."
+    - echo "Deployment successful"
+    
