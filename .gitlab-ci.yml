@@ -1,27 +1,24 @@
 image: alpine:latest
 
 stages:
-  - тест
-  - сборка
-  - деплой
+  - test
+  - build
+  - deploy
 
-тест:
-  stage: тест
+test_job:
+  stage: test
   script:
-    - echo "Этап 1: Тестирование"
-    - echo "ОС: Alpine Linux"
-    - echo "Тесты пройдены"
+    - echo "Stage 1: Testing"
+    - echo "All tests passed!"
 
-сборка:
-  stage: сборка
+build_job:
+  stage: build
   script:
-    - echo "Этап 2: Сборка"
-    - echo "Имитация сборки проекта..."
-    - echo "Сборка завершена"
+    - echo "Stage 2: Building"
+    - echo "Build completed!"
 
-деплой:
-  stage: деплой
+deploy_job:
+  stage: deploy
   script:
-    - echo "Этап 3: Деплой"
-    - echo "Развертывание приложения..."
-    - echo "Деплой успешно завершен"
+    - echo "Stage 3: Deployment"
+    - echo "Deployment successful!"
